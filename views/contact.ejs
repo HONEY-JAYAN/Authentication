@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/main_nav.ejs')  %>
+
+<h2 class="wel7">Contact Me</h2>
+<div class="container div11">
+    <div class="input1">
+        <label for="fn">First Name</label>
+        <br>
+        <input type="text" name="fname" placeholder="First Name">
+        <br>
+        <label for="ln">Last Name</label>
+        <br>
+        <input type="text" name="lname" placeholder="Last Name">
+        <br>
+        <label for="email">Email ID</label>
+        <br>
+        <input type="text" name="email" placeholder="Type Your Email Id here">
+        <br>
+        <label for="message">Message</label>
+        <br>
+        <textarea style="width: 500px; " name="message" placeholder="Tell Me Something..."></textarea>
+        <br>
+        <button type="button" class="btn btn-dark" onclick="location.href='home'" style=" margin-top: 10px;">Submit</button>       
+    </div>
+    <div class="panel panel1">
+        <p class="details">mail: <a href="mailto:honeyjayan2000@gmail.com">honeyjayan2000@gmail.com</a><br>phone: (249) 876 5714</p>
+    </div>
+
+</div>
+
+
+<%- include('partials/bottom_nav.ejs')  %> 
+  
+<%- include('partials/footer.ejs')  %> 
