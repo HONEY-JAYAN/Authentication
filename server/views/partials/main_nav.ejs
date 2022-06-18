@@ -47,6 +47,14 @@
           </li>
           <% } %>
 
+          <% if (title == "Business Contacts") { %>
+            <li class="nav-item active">
+            <% } else  { %>
+            <li class="nav-item">
+            <% } %>
+              <a class="nav-link" href="/contacts-list"><i class="fas fa-book"></i> Business Contacts </a>
+            </li>
+
           <% if (title == "Contact") { %>
           <li class="nav-item">
           <a class="nav-link active" href="/contact"><i class="fa-solid fa-phone"></i> Contact</a>
