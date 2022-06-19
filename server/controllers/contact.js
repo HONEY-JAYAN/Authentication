@@ -15,13 +15,16 @@ module.exports.displayContactList = (req, res, next) => {
         {
             //console.log(BookList);
 
-            res.render('contact/contacts', {title: 'Contacts List', ContactsList: contactsList})   
+            res.render('contact/contacts', {title: 'Contacts List',
+            ContactsList: contactsList,
+            displayName: req.user ? req.user.displayName :''})   
         }
     });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('contact/add', {title: 'Add Contact'})          
+    res.render('contact/add', {title: 'Add Contact',
+    displayName: req.user ? req.user.displayName :''})          
 }
 
 module.exports.processAddPage = (req, res, next) => {
@@ -55,7 +58,8 @@ module.exports.displayEditPage = (req, res, next) => {
         }
         else
         {
-            res.render('contact/edit', {title: 'Edit Contact', contact: contactToedit})
+            res.render('contact/edit', {title: 'Edit Contact', contact: contactToedit,
+            displayName: req.user ? req.user.displayName :''})
         }
     });
 }
